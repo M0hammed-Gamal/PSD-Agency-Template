@@ -58,6 +58,37 @@ body {
 /* End Global Rules  */
 
 
+/* start Component  */
+
+.special-heading {
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.special-heading+p {
+    text-align: center;
+    margin: -30px 0 0;
+    font-size: 20px;
+    color: #797979
+}
+
+@media (max-width: 767px) {
+    .special-heading {
+        font-size: 60px;
+    }
+    .special-heading+p {
+        margin-top: -20px;
+    }
+}
+
+
+/* End Component  */
+
+
 /* Start Header */
 
 .header {
