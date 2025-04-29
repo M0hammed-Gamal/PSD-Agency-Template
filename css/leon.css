@@ -2,6 +2,7 @@
 
 :root {
     --main-color: #10cab7;
+    --secondary-color: #2c4755;
 }
 
 
@@ -260,6 +261,75 @@ body {
     line-height: 1.8;
     color: #777;
     font-size: 17px;
+}
+
+.services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.services .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 100px;
+}
+
+.services .services-content .srv {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+    .services .services-content .srv {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.services .services-content .srv i {
+    color: var(--main-color);
+    flex-basis: 60px;
+}
+
+.services .services-content .srv .txt {
+    flex: 1;
+}
+
+.services .services-content .srv .txt h3 {
+    margin: 0 0 20px;
+}
+
+.services .services-content .srv .txt p {
+    color: #777;
+    font-weight: 300px;
+    line-height: 1.6;
+}
+
+.services .services-content .image {
+    text-align: center;
+    position: relative;
+}
+
+.services .services-content .image img {
+    width: 260px;
+}
+
+.services .services-content .image::before {
+    content: '';
+    position: absolute;
+    background-color: var(--secondary-color);
+    width: 100px;
+    height: calc(100% + 100px);
+    right: 0;
+    top: -50px;
+    z-index: -1;
+}
+
+@media (max-width: 1199px) {
+    .image-column {
+        display: none;
+    }
 }
 
 
